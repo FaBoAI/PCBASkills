@@ -1,6 +1,13 @@
 ---
 name: multilayer-pcb-skill
-description: Multilayer (4/6/8-layer) HDI PCB development skill for EasyEDA Pro + JLCPCB. Use when routing dense boards (fine-pitch QFN/BGA, 0.35mm pitch, stacked connectors), converting 2-4 layer designs to 6/8 layers, planning layer stacks and GND planes, escaping fine-pitch pad columns (fanout), using micro vias / HDI rules, integrating external autorouters (KiCadRoutingTools), rebuilding copper pours, GND stitching, or recovering EasyEDA cloud projects from data loss. Trigger on: "多層基板", "8層", "6層", "multilayer", "HDI", "マイクロビア", "micro via", "fanout", "ファンアウト", "層スタック", "layer stack", "GNDプレーン", "内層", "inner layer", "escape routing".
+description: >-
+  Multilayer (4/6/8-layer) HDI PCB development skill for EasyEDA Pro + JLCPCB. Use when routing
+  dense boards (fine-pitch QFN/BGA, 0.35mm pitch, stacked connectors), converting 2-4 layer
+  designs to 6/8 layers, planning layer stacks and GND planes, escaping fine-pitch pad columns
+  (fanout), using micro vias / HDI rules, integrating external autorouters (KiCadRoutingTools),
+  rebuilding copper pours, GND stitching, or recovering EasyEDA cloud projects from data loss.
+  Trigger on: "多層基板", "8層", "6層", "multilayer", "HDI", "マイクロビア", "micro via", "fanout", "ファンアウト",
+  "層スタック", "layer stack", "GNDプレーン", "内層", "inner layer", "escape routing".
 ---
 
 # 多層基板開発スキル (EasyEDA Pro + JLCPCB)

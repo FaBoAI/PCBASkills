@@ -1,6 +1,21 @@
 ---
 name: pcba-skill
-description: Use when working on EasyEDA PCB projects that will be quoted or ordered through JLCPCB PCBA, especially when changing parts because of JLCPCB stock shortfalls (incl. consign-only modules like XIAO/Pico and out-of-stock tact switches), fixing EasyEDA schematic/PCB layout issues, rotating/moving connectors and rerouting, placing USB connectors on board edges or connectors on the bottom layer, creating board outlines, autorouting, rebuilding GND copper pours, repairing orphan GND pads / floating stitching vias / pour voids, verifying user-added vias, generating BOM/Pick-and-Place/Gerber order data, adding silkscreen markings, or opening "Order PCB/FPC at JLCPCB" quote pages. Also use when designing a NEW board from scratch in EasyEDA (placing components, net-stub wiring, pre-wiring design review), building shift-register (74HC165) keyboards or button arrays, wiring I2S audio (MAX98357A amps, MEMS microphones), mounting FPC displays, Arduino UNO-compatible EasyEDA layouts, JLCPCB parts matching, and fixing JLCPCB 3D-printed enclosure orders rejected for "multiple shells". Also use when bringing up a fabricated board: diagnosing wrong/inverted LCD colors (ST7789 INVON batch variance), silent I2S audio (amp power rail / speaker-connector / firmware-data bisection), and confirming which board revision is physically connected before debugging.
+description: >-
+  Use when working on EasyEDA PCB projects that will be quoted or ordered through JLCPCB PCBA,
+  especially when changing parts because of JLCPCB stock shortfalls (incl. consign-only modules
+  like XIAO/Pico and out-of-stock tact switches), fixing EasyEDA schematic/PCB layout issues,
+  rotating/moving connectors and rerouting, placing USB connectors on board edges or connectors on
+  the bottom layer, creating board outlines, autorouting, rebuilding GND copper pours, repairing
+  orphan GND pads / floating stitching vias / pour voids, verifying user-added vias, generating
+  BOM/Pick-and-Place/Gerber order data, adding silkscreen markings, or opening "Order PCB/FPC at
+  JLCPCB" quote pages. Also use when designing a NEW board from scratch in EasyEDA (placing
+  components, net-stub wiring, pre-wiring design review), building shift-register (74HC165)
+  keyboards or button arrays, wiring I2S audio (MAX98357A amps, MEMS microphones), mounting FPC
+  displays, Arduino UNO-compatible EasyEDA layouts, JLCPCB parts matching, and fixing JLCPCB
+  3D-printed enclosure orders rejected for "multiple shells". Also use when bringing up a
+  fabricated board: diagnosing wrong/inverted LCD colors (ST7789 INVON batch variance), silent I2S
+  audio (amp power rail / speaker-connector / firmware-data bisection), and confirming which board
+  revision is physically connected before debugging.
 ---
 
 # PCBA Skill (EasyEDA + JLCPCB)
