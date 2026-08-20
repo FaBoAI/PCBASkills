@@ -49,7 +49,8 @@ multilayer-pcb-skill/
     ├── strict.py         # 接続性(島数)チェッカ
     ├── validate.py       # 適用前検証ゲート
     ├── audit.py          # 全盤面クリアランス監査
-    └── spots.py          # ビア可能座標の全列挙
+    ├── spots.py          # ビア可能座標の全列挙
+    └── drillcheck.py     # Gerberドリル重なり検査(発注前最終防衛線)
 ```
 
 ## 前提環境

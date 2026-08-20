@@ -11,6 +11,8 @@ EasyEDA Pro ──(export_geometry.js)──> geom_pads.json / geom_tracks.json
         ┌───────────────┬──────────────┬────┴─────────┐
    strict.py        audit.py      validate.py      spots.py
    接続性(島数)     全盤面監査     適用前ゲート     ビア座標探索
+
+発注用 Gerber zip ──> drillcheck.py   ドリル重なり検査(製造データの最終防衛線)
 ```
 
 1. **エクスポート**: `export_geometry.js` をブリッジ/CDP でページ実行し、
@@ -27,6 +29,7 @@ EasyEDA Pro ──(export_geometry.js)──> geom_pads.json / geom_tracks.json
 | `validate.py` | 新規銅(routes.json)の適用前監査。既存全物+新規同士+縁+穴+キープアウト。違反1件でも適用禁止 | `python3 validate.py routes.json [--profile jlc]` |
 | `audit.py` | 全盤面クリアランス監査(TT/TP/TV/VV/VP/穴/縁/キープアウト) | `python3 audit.py [--profile jlc]` |
 | `spots.py` | bbox内のビア可能座標を1mil格子で全列挙(numpy、スラック付き) | `python3 spots.py x0 x1 y0 y1 [net] [--via micro]` |
+| `drillcheck.py` | **Gerber zipのExcellonドリル**を解析し穴同士の重なりを総当たり判定。NPTH穴はジオメトリエクスポートに乗らないため、この検査だけが捕まえられる違反がある(発注前必須) | `python3 drillcheck.py Gerber.zip [--margin 0.5]` |
 
 ## ルールプロファイル (geom.py PROFILES)
 
@@ -53,6 +56,11 @@ EasyEDA Pro ──(export_geometry.js)──> geom_pads.json / geom_tracks.json
 単位は mil、y は下向き負(EasyEDA Pro 座標系)。ビア径 `d` は実径を
 エクスポートすること(標準24/マイクロ9.84が混在する基板で固定値を使うと
 偽violationが出る)。
+
+**注意**: NPTH穴(`pcb_PrimitiveHole` — コネクタ位置決めペグ、ネジ穴)は
+このパッドエクスポートに**含まれない**。設計側で障害物に加えるか、最後に
+`drillcheck.py` でGerberドリルを直接検査すること(こちらは単位mm、
+EasyEDA ProがビアをPTHファイルにも重複出力する仕様への対処込み)。
 
 ## 依存
 
